@@ -6,4 +6,3 @@ services:
   docker
 script:
   - mvn clean verify docker:build
-  - docker-compose -f src/main/docker/docker-compose.yml up
