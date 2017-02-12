@@ -2,4 +2,8 @@ language: java
 jdk:
   - oraclejdk8
 sudo: false
-script: mvn clean verify
+services:
+  docker
+script:
+  - mvn clean verify docker:build
+  - docker-compose -f src/main/docker/docker-compose.yml up

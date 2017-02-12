@@ -1,0 +1,15 @@
+unnamed-mysql:
+  image: mysql:latest
+  environment:
+    - MYSQL_ROOT_PASSWORD=12345678
+    - MYSQL_DATABASE=unnamed
+    - MYSQL_USER=dbuser
+    - MYSQL_PASSWORD=12345678
+
+unnamed-startup:
+  image: benoc008/unnamed-startup
+  links:
+    - unnamed-mysql:mysql
+  ports:
+    - 8080:8080
+    - 5005:5005
