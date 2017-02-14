@@ -1,18 +1,23 @@
 spring:
   datasource:
-    url: jdbc:mysql://172.17.0.2:3306/unnamed
-    username: dbuser
-    password: 12345678
-    platform: mysql
-    initialize: false
+#todo sample and make this file ignored by default
+    url: jdbc:h2:../h2/test
+    #url=jdbc:h2:mem:mydb #inmemory
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+    initialize: true
   jpa:
-    database-platform: org.hibernate.dialect.MySQLDialect
+    database-platform: org.hibernate.dialect.H2Dialect
 
 ---
 spring:
   profiles: container
   datasource:
-    url: jdbc:mysql://${MYSQL_PORT_3306_TCP_ADDR}:${MYSQL_PORT_3306_TCP_PORT}/${MYSQL_ENV_MYSQL_DATABASE}
-    username: ${MYSQL_ENV_MYSQL_USER}
-    password: ${MYSQL_ENV_MYSQL_PASSWORD}
+    url: jdbc:postgresql://postgres:5432/dbname
+    username: dbuser
+    password: 12345678
+    driverClassName: org.postgresql.Driver
     initialize: true
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
