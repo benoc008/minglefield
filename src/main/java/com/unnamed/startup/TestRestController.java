@@ -11,6 +11,6 @@ public class TestRestController {
 
     @RequestMapping(method = GET)
     public String get(){
-        return "aaaaaa";
+        return "Last test for today.";
     }
 }
