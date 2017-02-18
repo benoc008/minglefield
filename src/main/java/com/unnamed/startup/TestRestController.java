@@ -10,7 +10,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 public class TestRestController {
 
     @RequestMapping(method = GET)
-    public String get(){
+    public String get() {
         return "Last test for today.";
     }
 }
