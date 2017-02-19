@@ -9,7 +9,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 @RequestMapping("/")
 public class TestRestController {
 
-    @RequestMapping(method = GET)
+    @RequestMapping(path = "asd", method = GET)
     public String get(){
         return "Last test for today.";
     }
