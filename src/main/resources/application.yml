@@ -21,3 +21,17 @@ spring:
     initialize: true
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+---
+spring:
+  profiles: production
+  datasource:
+    url: ${JDBC_DATABASE_URL}
+    username: ${JDBC_DATABASE_USERNAME}
+    password: ${JDBC_DATABASE_PASSWORD}
+    driverClassName: org.postgresql.Driver
+    initialize: true
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+
