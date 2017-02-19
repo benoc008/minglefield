@@ -6,7 +6,7 @@ postgres:
     - POSTGRES_DB=dbname
 
 unnamed-startup:
-  image: benoc008/unnamed-startup
+  image: benoc008/minglefield
   links:
     - postgres
   ports:

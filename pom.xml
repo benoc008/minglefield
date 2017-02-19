@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.unnamed-startup</groupId>
-	<artifactId>unnamed-startup</artifactId>
+	<groupId>com.minglefield</groupId>
+	<artifactId>minglefield</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>unnamed</name>
-	<description>Yet to be named application for making new friends.</description>
+	<name>MingleField</name>
+	<description>The app for getting to know new people and have fun together in real life.</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
