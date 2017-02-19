@@ -1,0 +1,19 @@
+{
+  "name": "minglefield",
+  "version": "0.0.1",
+  "scripts": {
+    "clean": "npm cache clean && rimraf node_modules",
+    "build": "webpack --progress --bail",
+    "watch": "npm run build -- --watch"
+  },
+  "main": "src/main/resources/webjars/ApplicationModule.js",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "rimraf": "2.6.0",
+    "webpack": "2.2.1",
+    "typescript": "2.1.6",
+    "awesome-typescript-loader": "3.0.4"
+  }
+}
