@@ -9,18 +9,18 @@ spring:
     initialize: true
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
-#
-#---
-#spring:
-#  profiles: container
-#  datasource:
-#    url: jdbc:postgresql://postgres:5432/dbname
-#    username: dbuser
-#    password: 12345678
-#    driverClassName: org.postgresql.Driver
-#    initialize: true
-#  jpa:
-#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+---
+spring:
+  profiles: container
+  datasource:
+    url: jdbc:postgresql://postgres:5432/dbname
+    username: dbuser
+    password: 12345678
+    driverClassName: org.postgresql.Driver
+    initialize: true
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 ---
 spring:
@@ -33,5 +33,6 @@ spring:
     initialize: true
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-
-
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create
