@@ -35,4 +35,4 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     generate-ddl: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
