@@ -1,0 +1,16 @@
+
+.glyphicon.glyphicon-user {
+    font-size: 20px;
+}
+
+.right-inner-addon input {
+    padding-right: 30px;
+}
+.right-inner-addon i {
+    position: absolute;
+    right: 0;
+    padding: 10px 12px;
+    padding-right: 20px;
+    pointer-events: none;
+    color: #555;
+}

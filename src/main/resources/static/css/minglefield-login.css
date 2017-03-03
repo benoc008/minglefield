@@ -38,13 +38,6 @@ img {
     max-height: 100%;
 }
 
-.form-bg {
-    padding: 15px 35px 45px;
-    margin: 0 auto;
-    background-color: #eeeeee;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
 .form-signin {
     max-width: 380px;
     padding: 15px 35px 45px;
