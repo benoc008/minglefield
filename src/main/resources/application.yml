@@ -36,3 +36,11 @@ spring:
     initialize: true
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+---
+
+# FLYWAY (FlywayProperties)
+flyway:
+  baseline-on-migrate: true
+  locations: classpath:initscripts # locations of migrations scripts
+  check-location: true # Check that migration scripts location exists.
