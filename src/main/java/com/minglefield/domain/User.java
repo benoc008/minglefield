@@ -1,6 +1,6 @@
-package com.unnamed.startup.domain;
+package com.minglefield.domain;
 
-import com.unnamed.startup.dto.RegisterUserCommand;
+import com.minglefield.dto.RegisterUserCommand;
 
 import javax.persistence.*;
 

@@ -1,4 +1,4 @@
-package com.unnamed.startup.dao;
+package com.minglefield.dao;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

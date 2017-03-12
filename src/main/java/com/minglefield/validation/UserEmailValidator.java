@@ -1,9 +1,9 @@
-package com.unnamed.startup.validation;
+package com.minglefield.validation;
 
-import com.unnamed.startup.dao.UserDAO;
-import com.unnamed.startup.domain.User;
-import com.unnamed.startup.dto.RegisterUserCommand;
-import com.unnamed.startup.exception.BusinessException;
+import com.minglefield.dao.UserDAO;
+import com.minglefield.domain.User;
+import com.minglefield.exception.BusinessException;
+import com.minglefield.dto.RegisterUserCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

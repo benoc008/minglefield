@@ -1,4 +1,4 @@
-package com.unnamed.startup;
+package com.minglefield;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

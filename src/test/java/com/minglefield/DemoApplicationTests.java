@@ -1,4 +1,4 @@
-package com.unnamed.startup;
+package com.minglefield;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

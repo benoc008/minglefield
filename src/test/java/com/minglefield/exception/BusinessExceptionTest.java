@@ -1,4 +1,4 @@
-package com.unnamed.startup.exception;
+package com.minglefield.exception;
 
 import org.junit.Test;
 

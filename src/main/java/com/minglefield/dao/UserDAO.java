@@ -1,6 +1,6 @@
-package com.unnamed.startup.dao;
+package com.minglefield.dao;
 
-import com.unnamed.startup.domain.User;
+import com.minglefield.domain.User;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.NoResultException;

@@ -1,6 +1,6 @@
-package com.unnamed.startup.validation;
+package com.minglefield.validation;
 
-import com.unnamed.startup.exception.BusinessException;
+import com.minglefield.exception.BusinessException;
 
 import java.util.ArrayList;
 import java.util.List;

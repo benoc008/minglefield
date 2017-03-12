@@ -1,11 +1,11 @@
-package com.unnamed.startup.service;
+package com.minglefield.service;
 
-import com.unnamed.startup.dao.UserDAO;
-import com.unnamed.startup.domain.User;
-import com.unnamed.startup.dto.RegisterUserCommand;
-import com.unnamed.startup.exception.BusinessException;
-import com.unnamed.startup.validation.CollectiveValidator;
-import com.unnamed.startup.validation.UserRegistrationValidator;
+import com.minglefield.dao.UserDAO;
+import com.minglefield.domain.User;
+import com.minglefield.exception.BusinessException;
+import com.minglefield.validation.CollectiveValidator;
+import com.minglefield.validation.UserRegistrationValidator;
+import com.minglefield.dto.RegisterUserCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

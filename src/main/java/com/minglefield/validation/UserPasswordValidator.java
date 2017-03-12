@@ -1,7 +1,7 @@
-package com.unnamed.startup.validation;
+package com.minglefield.validation;
 
-import com.unnamed.startup.dto.RegisterUserCommand;
-import com.unnamed.startup.exception.BusinessException;
+import com.minglefield.exception.BusinessException;
+import com.minglefield.dto.RegisterUserCommand;
 import org.springframework.stereotype.Component;
 
 @Component

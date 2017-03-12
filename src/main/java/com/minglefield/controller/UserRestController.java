@@ -1,8 +1,8 @@
-package com.unnamed.startup.controller;
+package com.minglefield.controller;
 
-import com.unnamed.startup.dto.RegisterUserCommand;
-import com.unnamed.startup.exception.BusinessException;
-import com.unnamed.startup.service.UserRegistrationService;
+import com.minglefield.exception.BusinessException;
+import com.minglefield.dto.RegisterUserCommand;
+import com.minglefield.service.UserRegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

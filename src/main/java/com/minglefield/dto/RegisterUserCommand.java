@@ -1,4 +1,4 @@
-package com.unnamed.startup.dto;
+package com.minglefield.dto;
 
 public class RegisterUserCommand {
     public String firstName;
