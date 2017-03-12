@@ -46,7 +46,8 @@ public abstract class AbstractBaseDAO<T> {
 
     @SuppressWarnings("unchecked")
     public <N extends T> List<N> find(Class<N> clazz) {
-        return this.getEntityManager().createQuery("SELECT e FROM " + clazz.getSimpleName() + " e").getResultList();
+        return this.getEntityManager().createQuery("SELECT e FROM " + clazz.getSimpleName() + " e")
+                .getResultList();
     }
 
     public <N extends T> void deleteById(Class<N> clazz, Objects id) {
@@ -68,7 +69,8 @@ public abstract class AbstractBaseDAO<T> {
         if (delegate instanceof Session) {
             session = (Session) delegate;
         } else {
-            LOGGER.warn("The delegate in the EntityManager is not an instance of org.hibernate.Session");
+            LOGGER.warn(
+                    "The delegate in the EntityManager is not an instance of org.hibernate.Session");
         }
 
         return session;

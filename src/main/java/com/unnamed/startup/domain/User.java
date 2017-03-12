@@ -35,7 +35,8 @@ public class User {
     }
 
     public static User createFromRegisterCommand(RegisterUserCommand registerUserCommand) {
-        return new User(registerUserCommand.firstName, registerUserCommand.lastName, registerUserCommand.emailAddress,
+        return new User(registerUserCommand.firstName, registerUserCommand.lastName,
+                registerUserCommand.emailAddress,
                 registerUserCommand.password);
     }
 
