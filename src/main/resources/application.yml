@@ -1,7 +1,7 @@
 spring:
   datasource:
 #todo sample and make this file ignored by default
-    url: jdbc:h2:../h2/test
+    url: jdbc:h2:../h2/mingle_field
     #url=jdbc:h2:mem:mydb #inmemory
     username: sa
     password:
@@ -10,12 +10,16 @@ spring:
     initialize: true
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+flyway:
+  locations: classpath:initscripts/common,initscripts/h2
+  baseline-on-migrate: true
+  check-location: true
 
 ---
 spring:
   profiles: container
   datasource:
-    url: jdbc:postgresql://postgres:5432/dbname
+    url: jdbc:postgresql://postgres:5432/mingle_field
     username: dbuser
     password: 12345678
     driverClassName: org.postgresql.Driver
@@ -23,6 +27,8 @@ spring:
     initialize: true
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+flyway:
+  locations: classpath:initscripts/common,initscripts/postgresql
 
 ---
 spring:
@@ -36,11 +42,5 @@ spring:
     initialize: true
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-
----
-
-# FLYWAY (FlywayProperties)
 flyway:
-  baseline-on-migrate: true
-  locations: classpath:initscripts # locations of migrations scripts
-  check-location: true # Check that migration scripts location exists.
+  locations: classpath:initscripts/common,initscripts/postgresql

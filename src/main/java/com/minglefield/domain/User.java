@@ -5,6 +5,7 @@ import com.minglefield.dto.RegisterUserCommand;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "MINGLE_USER") // USER is a reserved keyword
 public class User {
 
     @Id

@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class BusinessExceptionDescription {
+public class MingleExceptionDescription {
 
     private String messageKey;
     private String translatedMessage;
     private List<String> parameterList = new ArrayList<>();
 
-    public BusinessExceptionDescription(String messageKey) {
+    public MingleExceptionDescription(String messageKey) {
         this.messageKey = messageKey;
         // TODO Create an object that can retrieve values from properties based on the key
-        setTranslatedMessage(messageKey);
+        setTranslatedMessage("translated");
     }
 
     public void addParameters(String... parameters) {

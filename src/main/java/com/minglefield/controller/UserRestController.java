@@ -1,7 +1,7 @@
 package com.minglefield.controller;
 
-import com.minglefield.exception.BusinessException;
 import com.minglefield.dto.RegisterUserCommand;
+import com.minglefield.exception.MingleException;
 import com.minglefield.service.UserRegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,7 +21,8 @@ public class UserRestController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public void registerUser(@RequestBody RegisterUserCommand registerUserCommand) throws BusinessException {
+    public void registerUser(@RequestBody RegisterUserCommand registerUserCommand)
+            throws MingleException {
         userRegistrationService.registerUser(registerUserCommand);
     }
 }

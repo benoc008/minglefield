@@ -2,7 +2,7 @@ package com.minglefield.service;
 
 import com.minglefield.dao.UserDAO;
 import com.minglefield.domain.User;
-import com.minglefield.exception.BusinessException;
+import com.minglefield.exception.MingleException;
 import com.minglefield.validation.CollectiveValidator;
 import com.minglefield.validation.UserRegistrationValidator;
 import com.minglefield.dto.RegisterUserCommand;
@@ -29,13 +29,13 @@ public class UserRegistrationService {
         this.validators = validators;
     }
 
-    public void registerUser(RegisterUserCommand registerUserCommand) throws BusinessException {
+    public void registerUser(RegisterUserCommand registerUserCommand) throws MingleException {
         validate(registerUserCommand);
         User user = User.createFromRegisterCommand(registerUserCommand);
         userDAO.persist(user);
     }
 
-    private void validate(RegisterUserCommand registerUserCommand) throws BusinessException {
+    private void validate(RegisterUserCommand registerUserCommand) throws MingleException {
         CollectiveValidator<RegisterUserCommand> collectiveValidator = new CollectiveValidator<>();
         for (UserRegistrationValidator validator : validators) {
             collectiveValidator.addValidator(validator);

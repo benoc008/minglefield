@@ -1,13 +1,13 @@
 package com.minglefield.validation;
 
-import com.minglefield.exception.BusinessException;
+import com.minglefield.exception.MingleException;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CollectiveValidator<T> {
 
-    private List<BusinessException> businessExceptions = new ArrayList<>();
+    private List<MingleException> mingleExceptions = new ArrayList<>();
     private List<Validator<T>> validators = new ArrayList<>();
 
     public CollectiveValidator() {
@@ -26,14 +26,14 @@ public class CollectiveValidator<T> {
         for (Validator validator : validators) {
             try {
                 validator.validate(objectToValidate);
-            } catch (BusinessException e) {
-                businessExceptions.add(e);
+            } catch (MingleException e) {
+                mingleExceptions.add(e);
             }
         }
         return this;
     }
 
-    public void throwExceptions() throws BusinessException {
-        BusinessException.throwCollectiveBusinessException(businessExceptions);
+    public void throwExceptions() throws MingleException {
+        MingleException.throwCollectiveException(mingleExceptions);
     }
 }

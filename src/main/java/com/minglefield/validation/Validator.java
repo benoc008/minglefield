@@ -1,7 +1,7 @@
 package com.minglefield.validation;
 
-import com.minglefield.exception.BusinessException;
+import com.minglefield.exception.MingleException;
 
 public interface Validator<T> {
-    void validate(T object) throws BusinessException;
+    void validate(T object) throws MingleException;
 }
